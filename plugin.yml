@@ -1,0 +1,20 @@
+name: BetterCommands HomeAddon
+version: Beta 0.1 Build#003
+authors: [Robins Tech-Projects]
+website: robins-techprojects.blogspot.com
+main: bcphome.main
+depend: [BetterCommands]
+commands:
+  home:
+    description: Teleportiert den Spieler zu seinem Home
+    usage: /home
+    permission: home.home
+  sethome:
+    description: Setzt den Homepunkt eines Spielers
+    usage: /sethome
+    permission: home.sethome
+  delhome:
+    description: Loescht den Homepunkt eines Spielers
+    usage: /delhome
+    permission: home.delhome    
+      
