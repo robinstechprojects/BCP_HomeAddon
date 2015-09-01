@@ -9,8 +9,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Listener;
 import org.bukkit.plugin.java.JavaPlugin;
-
-import com.blogspot.robinstechprojects.BCP.BCPMain;
+import BCP.Core.Libs.HomeAddon;
 
 public class main extends JavaPlugin implements Listener {
 	HashMap<String, savedLocation> homes = new HashMap<String, savedLocation>();
@@ -23,7 +22,7 @@ public class main extends JavaPlugin implements Listener {
 		try {
 			if (getDataFolder().exists()) {
 				this.homes = (HashMap<String, savedLocation>) 
-						BCPMain.load(getDataFolder() + "/data.bin") ;
+						HomeAddon.load(getDataFolder() + "/data.bin") ;
 			} else {
 				getDataFolder().mkdir();
 				Bukkit.getLogger().info("Keine Daten Verfügbar ! Wird das Plugin zum ersten mal genutzt ?");
@@ -40,7 +39,7 @@ public class main extends JavaPlugin implements Listener {
 		log.info("Stoppen !");
 		try {
 			if (getDataFolder().exists()) {
-				BCPMain.save(this.homes, getDataFolder() + "/data.bin");
+				HomeAddon.save(this.homes, getDataFolder() + "/data.bin");
 			} else {
 				getDataFolder().mkdir();
 			}
@@ -49,10 +48,10 @@ public class main extends JavaPlugin implements Listener {
 		}
 	}
  public void save(Object obj, String path) throws Exception{ 
-	BCPMain.save(obj, path);
+	HomeAddon.save(obj, path);
  }
 	public void load(String path) throws Exception {
-BCPMain.load(path);
+HomeAddon.load(path);
 	}
 
 	public boolean onCommand(CommandSender sender, Command cmd, String commandLabel, String[] args) {
