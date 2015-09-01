@@ -1,9 +1,9 @@
-name: BetterCommands HomeAddon
-version: Beta 0.1 Build#003
+name: BetterCommands_HomeAddon
+version: Beta 0.1 Build#20
 authors: [Robins Tech-Projects]
 website: robins-techprojects.blogspot.com
 main: bcphome.main
-depend: [BetterCommands]
+depend: [BetterCommandsPlugin]
 commands:
   home:
     description: Teleportiert den Spieler zu seinem Home
